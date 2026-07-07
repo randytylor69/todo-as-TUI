@@ -1,10 +1,10 @@
-A simple & beginner-friendly [TUI](https://en.wikipedia.org/wiki/Text-based_user_interface) written in *see-plus-plus*, taking the form of a todo list. Figured I'll code it myself since there's no online guides covering this subject. Note that this is not a [CLI](https://en.wikipedia.org/wiki/Command-line_interface), but an interface with immediate updates rendering (one might call it "Immediate TUI"), which makes it unique and fun to develop. 
+An unsophisticated [TUI](https://en.wikipedia.org/wiki/Text-based_user_interface) written in *see-plus-plus*, taking the form of a todo list. Note its inherent difference from a [CLI](https://en.wikipedia.org/wiki/Command-line_interface), for this interface supports immediate updates rendering (one might call it "Immediate TUI") upon any input without the presence of an input buffer.
 
 ## Screenshots
 
 Coming soon
 
-## Used Concepts 
+## Interesting Concepts 
 
 List of programming concepts that made this project possible:
 - [ANSI Escape Codes](https://en.wikipedia.org/wiki/ANSI_escape_code): used to render elements anywhere on the terminal
