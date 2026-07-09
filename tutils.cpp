@@ -34,8 +34,23 @@ void Terminal::print(const std::string &str, const std::string &fg, const std::s
 /* @HELPER -> show/hide cursor. ARG = 'on' or 'off' */
 void Terminal::setCursor(const std::string &str) 
 {
-    str == "on" ? printf("\033[?25h\n") : printf("\033[?25l\n");
+    str == "on" ? printf("\033[?25h") : printf("\033[?25l");
 }
 
+void Terminal::setListMode(const int &num)
+{
+    listMode = num;
+}
 
+int Terminal::getListMode()
+{
+    return listMode;
+}
+// ================= NONE TERMINAL FUNCTIONS
+/* print (f)oreground + (b)ackground */
+void printfb(const std::string &str, const std::string &fg, const std::string &bg)
+{
+    // prints string formatted with fg&bg and a new line.
+    std::cout << fg << bg << str << "\033[0m";
+}
 

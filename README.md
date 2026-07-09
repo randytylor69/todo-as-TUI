@@ -2,7 +2,11 @@ An unsophisticated [TUI](https://en.wikipedia.org/wiki/Text-based_user_interface
 
 ## Screenshots
 
-Coming soon
+<div align="center">
+| <img style="width:300px" src="https://github.com/randytylor69/todo-as-TUI/blob/main/screenshots/newscreenshot_009.jpg"/> | <img style="width:300px" src="https://github.com/randytylor69/todo-as-TUI/blob/main/screenshots/newscreenshot_010.jpg"/> |
+|:--:|:--:|
+| *Viewing pending tasks* | *Viewing completed tasks*|
+</div>
 
 ## Interesting Concepts 
 
