@@ -73,6 +73,20 @@ int main()
 		terminal.setCursor("off");
 		break;
 
+	    case 'd': /* delete current item */
+		if (terminal.getListMode()==0)
+		{
+		    if (todos.getSize()==0) break;
+		    todos.cutCurrItem();
+		    todos.printList();
+		} else 
+		{
+		    if (dones.getSize()==0) break;
+		    dones.cutCurrItem();
+		    dones.printList();
+		}
+		break;
+
 	    case '\t': /* toggle between todo and done */
 		if (terminal.getListMode()==0)
 		{
