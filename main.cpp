@@ -27,6 +27,7 @@ int main()
     Todos todos;
     Dones dones;
 
+
     todos.add("get on the bus");
     todos.add("read a book");
     todos.add("contemplate about her");
@@ -60,6 +61,18 @@ int main()
 		    dones.printList();}
 		break;
 	    
+	    case 'i': /* insert new item */
+		terminal.setCanonical("on");
+		terminal.setCursor("on");
+
+		todos.add(terminal.getNewListItem());
+		todos.setCurrIndexToNewestItem();
+		todos.printList();
+
+		terminal.setCanonical("off");
+		terminal.setCursor("off");
+		break;
+
 	    case '\t': /* toggle between todo and done */
 		if (terminal.getListMode()==0)
 		{
@@ -74,13 +87,11 @@ int main()
 		if (terminal.getListMode()==0)
 		{
 		    if (todos.getSize()==0) break;
-		    std::string item = todos.cutCurrItem();
-		    dones.add(item);
+		    dones.add(todos.cutCurrItem());
 		    todos.printList();
 		} else {
 		    if (dones.getSize()==0) break;
-		    std::string item = dones.cutCurrItem();
-		    todos.add(item);
+		    todos.add(dones.cutCurrItem());
 		    dones.printList();
 		} 
 		break;

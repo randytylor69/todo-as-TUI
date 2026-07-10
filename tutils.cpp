@@ -46,6 +46,26 @@ int Terminal::getListMode()
 {
     return listMode;
 }
+
+void Terminal::setEditing(const bool &mode)
+{
+    editing = mode;
+}
+
+bool Terminal::isEditing()
+{
+    return editing;
+}
+
+std::string Terminal::getNewListItem()
+{
+    std::string item;
+    std::cout << "----------\nNew to-do (press [ENTER] to save): ";
+    std::getline(std::cin, item);
+    return item;
+}
+
+
 // ================= NONE TERMINAL FUNCTIONS
 /* print (f)oreground + (b)ackground */
 void printfb(const std::string &str, const std::string &fg, const std::string &bg)

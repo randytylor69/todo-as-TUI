@@ -54,3 +54,8 @@ int Todos::getSize()
 {
     return list.size();
 }
+
+void Todos::setCurrIndexToNewestItem()
+{ // quite a mouthful but it just highlights the last entered item
+    currIndex = list.size()-1;
+}

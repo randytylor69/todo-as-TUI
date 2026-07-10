@@ -16,6 +16,7 @@ class Todos
 	void selectPrevItem();
 	std::string cutCurrItem(); // remove & return the current item
 	int getSize();
+	void setCurrIndexToNewestItem();
 };
 
 #endif
