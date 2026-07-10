@@ -42,7 +42,7 @@ int main()
 	c=getchar();
 	switch (c)
 	{
-	    case 'k':
+	    case 'k': /* move up */
 		if (terminal.getListMode()==0){
 		    todos.selectPrevItem();
 		    todos.printList();}
@@ -51,7 +51,7 @@ int main()
 		    dones.printList();}
 		break;
 		
-	    case 'j':
+	    case 'j': /* move down */
 		if (terminal.getListMode()==0){
 		    todos.selectNextItem();
 		    todos.printList();}
@@ -60,7 +60,7 @@ int main()
 		    dones.printList();}
 		break;
 	    
-	    case '\t':
+	    case '\t': /* toggle between todo and done */
 		if (terminal.getListMode()==0)
 		{
 		    terminal.setListMode(1);
@@ -69,6 +69,21 @@ int main()
 		    terminal.setListMode(0);
 		    todos.printList();
 		} break;
+
+	    case '\n': /* toggle highlighted UI element */
+		if (terminal.getListMode()==0)
+		{
+		    if (todos.getSize()==0) break;
+		    std::string item = todos.cutCurrItem();
+		    dones.add(item);
+		    todos.printList();
+		} else {
+		    if (dones.getSize()==0) break;
+		    std::string item = dones.cutCurrItem();
+		    todos.add(item);
+		    dones.printList();
+		} 
+		break;
 	}
     } 
 

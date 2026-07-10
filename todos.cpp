@@ -1,6 +1,7 @@
 /* @CLASS that stores all the todos */
 
 #include "todos.h"
+#include "dones.h"
 #include "tutils.h"
 #include <print>
 #include <format>
@@ -38,4 +39,18 @@ void Todos::selectPrevItem()
 {
     if (currIndex == 0) currIndex = list.size()-1; // start of the list
     else currIndex--;
+}
+
+std::string Todos::cutCurrItem()
+{
+    std::string currItem = list[currIndex]; // copy the deleted item
+    list.erase(list.begin()+currIndex); 
+    /* modify index */
+    currIndex -= (currIndex==0) ? 0 : 1;
+    return currItem;
+}
+
+int Todos::getSize()
+{
+    return list.size();
 }

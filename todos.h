@@ -14,6 +14,8 @@ class Todos
 	void printList(); // print the todos list, current item highlighted
 	void selectNextItem();
 	void selectPrevItem();
+	std::string cutCurrItem(); // remove & return the current item
+	int getSize();
 };
 
 #endif

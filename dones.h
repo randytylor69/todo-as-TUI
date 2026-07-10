@@ -15,6 +15,8 @@ class Dones
 	void printList(); // print the todos list, current item highlighted
 	void selectNextItem();
 	void selectPrevItem();
+	std::string cutCurrItem();
+	int getSize();
 };
 
 #endif

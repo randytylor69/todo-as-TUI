@@ -40,3 +40,16 @@ void Dones::selectPrevItem()
     else currIndex--;
 }
 
+std::string Dones::cutCurrItem()
+{
+    std::string currItem = list[currIndex]; // copy the deleted item
+    list.erase(list.begin()+currIndex); 
+    /* modify index */
+    currIndex -= (currIndex==0) ? 0 : 1;
+    return currItem;
+}
+
+int Dones::getSize()
+{
+    return list.size();
+}
