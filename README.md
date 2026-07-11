@@ -1,4 +1,4 @@
-### The Thing
+## The Thing
 
 An unsophisticated [TUI](https://en.wikipedia.org/wiki/Text-based_user_interface) written in *see-plus-plus*, taking the form of a todo list. Note its inherent difference from a [CLI](https://en.wikipedia.org/wiki/Command-line_interface), for this interface supports immediate updates rendering (one might call it "Immediate TUI") upon any input without the presence of an input buffer.
 
@@ -12,7 +12,9 @@ This project is inspired entirely by [@tsoding's program](https://github.com/tso
 
 </div>
 
-### Man Page
+&nbsp;
+
+## Man Page
 
 <div align="center">
 
@@ -29,7 +31,9 @@ This project is inspired entirely by [@tsoding's program](https://github.com/tso
 
 Yes, it's mostly Vim Motions.
 
-### How To Run
+&nbsp;
+
+## How To Run
 
 ```
 make && ./main.out
