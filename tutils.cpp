@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdexcept>
 #include <iostream>
+#include <print>
 
 /* @HELPER -> modify terminal's canonical mode, cmd = "on" or "off" */
 void Terminal::setCanonical(const std::string &cmd)
@@ -57,10 +58,11 @@ bool Terminal::isEditing()
     return editing;
 }
 
-std::string Terminal::getNewListItem()
+std::string Terminal::getInputItem(const std::string &prompt)
 {
     std::string item;
-    std::cout << "----------\nNew to-do (press [ENTER] to save): ";
+    std::print("----------\n");
+    std::print("{} ([ENTER] to save): ", prompt);
     std::getline(std::cin, item);
     return item;
 }

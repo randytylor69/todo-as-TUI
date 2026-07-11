@@ -27,15 +27,6 @@ int main()
     Todos todos;
     Dones dones;
 
-
-    todos.add("get on the bus");
-    todos.add("read a book");
-    todos.add("contemplate about her");
-
-    dones.add("get off the bus");
-    dones.add("take off the cloth");
-    dones.add("jump into the river");
-
     todos.printList();
     
     char c {};
@@ -65,7 +56,9 @@ int main()
 		terminal.setCanonical("on");
 		terminal.setCursor("on");
 
-		todos.add(terminal.getNewListItem());
+		todos.add(terminal.getInputItem(
+		    "Insert new item"
+		));
 		todos.setCurrIndexToNewestItem();
 		todos.printList();
 
@@ -85,6 +78,20 @@ int main()
 		    dones.cutCurrItem();
 		    dones.printList();
 		}
+		break;
+
+	    case 'r': /* rename curr item */
+		if (terminal.getListMode()==0) break;
+		terminal.setCanonical("on");
+		terminal.setCursor("on");
+
+		todos.renameCurrItem(terminal.getInputItem(
+		    "Rename the current item"
+		));
+		todos.printList();
+
+		terminal.setCanonical("off");
+		terminal.setCursor("off");
 		break;
 
 	    case '\t': /* toggle between todo and done */

@@ -59,3 +59,10 @@ void Todos::setCurrIndexToNewestItem()
 { // quite a mouthful but it just highlights the last entered item
     currIndex = list.size()-1;
 }
+
+void Todos::renameCurrItem(const std::string &newname)
+{
+    list[currIndex] = newname;
+}
+
+

@@ -17,7 +17,7 @@ class Terminal
 	int getListMode();
 	bool isEditing();
 	void setEditing(const bool &mode);
-	std::string getNewListItem(); // prompts for a new list item
+	std::string getInputItem(const std::string &prompt); // prompts for a new list item
 
 };
 // non-class functions
