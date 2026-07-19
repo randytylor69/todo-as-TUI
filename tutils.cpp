@@ -61,8 +61,7 @@ bool Terminal::isEditing()
 std::string Terminal::getInputItem(const std::string &prompt)
 {
     std::string item;
-    std::print("----------\n");
-    std::print("{} ([ENTER] to save): ", prompt);
+    std::print("\n{} ([ENTER] to save): ", prompt);
     std::getline(std::cin, item);
     return item;
 }

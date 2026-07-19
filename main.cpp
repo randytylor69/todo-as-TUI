@@ -12,9 +12,7 @@ using namespace std;
  *
  */
 
-/* RUN SCRIPT: 
- * clear && g++ main.cpp tutils.cpp todos.cpp dones.cpp -o main && ./main
- * */
+/* RUN SCRIPT:    make && main.out   */
 
 int main()
 {
@@ -27,6 +25,8 @@ int main()
     Todos todos;
     Dones dones;
 
+    todos.compileDB();
+    dones.compileDB();
     todos.printList();
     
     char c {};
@@ -81,10 +81,10 @@ int main()
 		break;
 
 	    case 'r': /* rename curr item */
-		if (terminal.getListMode()==0) break;
+		if (terminal.getListMode()==1) break;
 		terminal.setCanonical("on");
 		terminal.setCursor("on");
-
+		
 		todos.renameCurrItem(terminal.getInputItem(
 		    "Rename the current item"
 		));
